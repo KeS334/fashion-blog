@@ -1,0 +1,24 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 80px;
+  height: 100px;
+  color: #171717;
+    &__left-side{
+      display: flex;
+      align-items: center;
+    }
+    &__right-side{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+}
+.nav{
+  width: 360px;
+  &__item{
+    &_active{
+      color: $mark-color;
+    }
+  }
+}
