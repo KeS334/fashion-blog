@@ -7,11 +7,14 @@
     &__left-side{
       display: flex;
       align-items: center;
+      font-weight: 700;
+      @include set-font(25,33);
     }
     &__right-side{
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @include set-font(14,19);
     }
 }
 .nav{
