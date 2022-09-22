@@ -1,0 +1,92 @@
+.stories{
+  width: 100%;
+  max-width: 770px;
+  &__feed{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 60px;
+    grid-column-gap: 30px;
+    margin-bottom: 60px;
+  }
+  &__item{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    &_wide{
+      grid-column: 1/3;
+      .stories__text{
+        text-align: left;
+        padding: 0 30px;
+      }
+      .stories__type{
+        margin-bottom: 6px;
+      }
+      .stories__primary_title{
+        margin-bottom: 11px;
+      }
+      .stories__description{
+        margin-bottom: 25px;
+        @include set-font(14,24);
+      }
+    }
+    img{
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  }
+  &__type{
+    text-transform: uppercase;
+    color: $mark-color;
+    margin-bottom: 4px;
+    @include set-font(12,15);
+  }
+  &__primary_title{
+    margin-bottom: 10px;
+    @include set-font(20,28);
+  }
+  &__subtitle{
+    display: flex;
+    margin-bottom: 14px;
+    p{
+      margin-right: 10px;
+      color: $grey3-color;
+      @include set-font(12,15)
+    }
+    span{
+      color: $grey4-color;
+    }
+  }
+  &__pagination{
+    width: 100%;
+    max-width: 509px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 39px;
+    border: 1px solid $grey-color;
+    a {
+      color: $primary-color;
+      font-family: 'HK Grotesk', sans-serif;
+      position: relative;
+      @include set-font(14,16);
+      &:first-child:before {
+        position: absolute;
+        content: '<';
+        left: -10px;
+        transform: translateX(-100%);
+      }
+      &:last-child:after {
+        position: absolute;
+        content: '>';
+        right: -10px;
+        transform: translateX(100%);
+      }
+    }
+  }
+}
+
+
