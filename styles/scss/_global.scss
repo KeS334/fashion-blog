@@ -1,5 +1,6 @@
 $primary-color: #171717;
 $mark-color: #C9A96E;
+$grey-color: #E5E5E5;
 $light-color: #FFFFFF;
 $primary-font: "PT Serif";
 $fs-small: 14px;
@@ -25,7 +26,53 @@ a{
   text-decoration: none;
   color: unset;
 }
-body {
+.page {
   color: $primary-color;
-  font-family: "PT Serif";
+  font-family: "PT Serif", serif;
+  &__gallery{
+      margin-bottom: 80px;
+  }
+  &__footer{
+    margin: 0 auto 29px;
+  }
+}
+.logo{
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  @include set-font(25,33);
+}
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 360px;
+  @include set-font(14,19);
+  &__item{
+    &_active{
+      color: $mark-color;
+    }
+  }
+}
+.icon-links{
+  width: 304px;
+  display: flex;
+  justify-content: space-between;
+  &__item{
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 1px solid #666;
+    border-radius: 50%;
+    &:hover{
+      background-color: $mark-color;
+      border: none;
+      svg{
+        fill: $light-color;
+      }
+    }
+  }
 }

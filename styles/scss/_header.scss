@@ -4,24 +4,4 @@
   padding: 0 80px;
   height: 100px;
   color: #171717;
-    &__left-side{
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      @include set-font(25,33);
-    }
-    &__right-side{
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      @include set-font(14,19);
-    }
-}
-.nav{
-  width: 360px;
-  &__item{
-    &_active{
-      color: $mark-color;
-    }
-  }
 }
