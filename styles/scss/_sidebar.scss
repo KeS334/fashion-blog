@@ -4,6 +4,9 @@
   &__about, &__feature, &__сategories{
     margin-bottom: 70px;
   }
+  .title-block{
+    margin-bottom: 20px;
+  }
 }
 .about{
   &__item {
@@ -11,9 +14,6 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  &__title{
-    margin-bottom: 20px;
   }
   .card {
     img {
@@ -54,10 +54,9 @@
   }
 }
 .feature{
-  display: grid;
-  grid-gap: 30px;
-  &__title{
-    margin-bottom: -10px;
+  &__list{
+    display: grid;
+    grid-gap: 30px;
   }
   .card{
     &__primary_title{
@@ -72,9 +71,6 @@
     color: $grey3-color;
     @include set-font(14,18)
   }
-  &__title{
-    margin-bottom: 20px;
-  }
   &__item{
     display: flex;
     justify-content: space-between;
@@ -84,5 +80,30 @@
     height: 1px;
     color: $grey-color;
   }
-
+}
+.social-media{
+  &__list{
+    display: grid;
+    grid-template: repeat(3, 1fr)/repeat(3, 1fr);
+    grid-gap: 3px;
+  }
+  &__item{
+    width: 88px;
+    height: 88px;
+    padding: 20px;
+    background-color: $grey5-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img{
+      height: 20px;
+      margin-bottom: 6px;
+    }
+    p{
+      color: $grey6-color;
+      text-align: center;
+      @include set-font(12,15);
+    }
+  }
 }
