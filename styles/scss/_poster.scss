@@ -5,10 +5,7 @@
   height: 600px;
   display: flex;
   align-items: end;
-  padding: 0 80px;
-  &__titles{
-   margin-bottom: 60px;
-  }
+  padding: 0 80px 60px;
 }
 .titles{
   color: $light-color;
