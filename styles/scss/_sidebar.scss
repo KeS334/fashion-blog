@@ -1,7 +1,7 @@
 .sidebar{
   width: 100%;
   max-width: 270px;
-  &__about{
+  &__about, &__feature, &__сategories{
     margin-bottom: 70px;
   }
 }
@@ -63,6 +63,26 @@
     &__primary_title{
       @include set-font(18,26)
     }
+  }
+}
+.сategories{
+  &__list {
+    display: grid;
+    grid-gap: 14px;
+    color: $grey3-color;
+    @include set-font(14,18)
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  &__item{
+    display: flex;
+    justify-content: space-between;
+  }
+  hr{
+    width: 100%;
+    height: 1px;
+    color: $grey-color;
   }
 
 }
