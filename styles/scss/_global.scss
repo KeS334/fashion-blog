@@ -5,7 +5,9 @@ $grey2-color: #B4B4B4;
 $grey3-color: #666666;
 $grey4-color: #B1B1B1;
 $light-color: #FFFFFF;
-$primary-font: "PT Serif";
+$serif-font: "PT Serif";
+$sans-font: "PT Sans";
+$extra-font: 'HK Grotesk';
 $fs-small: 14px;
 $fs-medium: 20px;
 $fs-big: 25px;
@@ -17,6 +19,12 @@ $fs-big: 25px;
 @font-face {
   font-family: "PT Serif";
   src: url("../../fonts/PTSerif-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../../fonts/PTSans-Regular.ttf") format("truetype");
   font-style: normal;
   font-weight: normal;
 }
@@ -37,7 +45,7 @@ a{
 }
 .page {
   color: $primary-color;
-  font-family: "PT Serif", serif;
+  font-family: $serif-font, serif;
   &__poster{
     margin-bottom: 59px;
   }
@@ -46,7 +54,9 @@ a{
   }
   &__main{
     margin: 0 auto 80px;
-    max-width: 800px;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
   }
   &__gallery{
       margin-bottom: 80px;
@@ -72,6 +82,50 @@ a{
       color: $mark-color;
     }
   }
+}
+.card{
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  img{
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  &__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 42px;
+    margin-bottom: 14px;
+  }
+  &__type{
+    text-transform: uppercase;
+    color: $mark-color;
+    margin-bottom: 4px;
+    @include set-font(12,15);
+  }
+  &__primary_title{
+    margin-bottom: 10px;
+    @include set-font(20,28);
+  }
+  &__subtitle{
+    display: flex;
+    p{
+      margin-right: 10px;
+      color: $grey3-color;
+      @include set-font(12,15)
+    }
+    span{
+      color: $grey4-color;
+    }
+  }
+}
+.title-block{
+  height: 50px;
+  border: 1px solid $grey-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @include set-font(16,21);
 }
 .icon-links{
   width: 304px;

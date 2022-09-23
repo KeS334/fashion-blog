@@ -1,0 +1,68 @@
+.sidebar{
+  width: 100%;
+  max-width: 270px;
+  &__about{
+    margin-bottom: 70px;
+  }
+}
+.about{
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  &__title{
+    margin-bottom: 20px;
+  }
+  .card {
+    img {
+      margin-bottom: 20px;
+    }
+    &__text{
+      padding: 0 10px;
+      margin-bottom: 14px;
+    }
+    &__name {
+      margin-bottom: 4px;
+      @include set-font(16, 21);
+    }
+    &__position {
+      color: $grey4-color;
+      font-style: italic;
+      margin-bottom: 14px;
+      @include set-font(14, 18);
+    }
+    &__massage {
+      font-family: $sans-font;
+      text-align: center;
+      @include set-font(14, 24);
+    }
+  }
+  &__link{
+    width: 100%;
+    padding: 12px 0;
+    border-top: 1px solid $grey-color;
+    display: flex;
+    align-items: center;
+    p{
+      color: $mark-color;
+      margin: 0 auto;
+      text-transform: uppercase;
+      @include set-font(12,16)
+    }
+  }
+}
+.feature{
+  display: grid;
+  grid-gap: 30px;
+  &__title{
+    margin-bottom: -10px;
+  }
+  .card{
+    &__primary_title{
+      @include set-font(18,26)
+    }
+  }
+
+}
