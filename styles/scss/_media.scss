@@ -73,7 +73,8 @@
       width: 66px;
       height: 66px;
       padding: 10px;
-      img{
+      svg{
+        min-height: unset;
         height: 14px;
       }
       p{
@@ -146,7 +147,7 @@
       width: 100%;
       height: unset;
       gap: 20px;
-      img{
+      svg{
         margin: 0;
       }
     }

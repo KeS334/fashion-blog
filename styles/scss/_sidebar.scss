@@ -96,14 +96,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    img{
-      height: 20px;
+    cursor: pointer;
+    transition: $transition-time;
+    svg{
+      min-height: 20px;
       margin-bottom: 6px;
+      fill: $grey3-color;
     }
     p{
       color: $grey6-color;
       text-align: center;
       @include set-font(12,15);
+    }
+    &:hover{
+      background-color: $mark-color;
+      svg{
+        fill: $light-color;
+      }
+      p {
+        color: $light-color;
+      }
     }
   }
 }

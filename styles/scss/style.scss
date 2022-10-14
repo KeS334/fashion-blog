@@ -10,6 +10,7 @@ $light-color: #FFFFFF;
 $serif-font: "PT Serif";
 $sans-font: "PT Sans";
 $extra-font: 'HK Grotesk';
+$transition-time: 400ms;
 
 @mixin set-font($size, $height){
   font-size: $size + px;
