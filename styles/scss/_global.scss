@@ -56,7 +56,6 @@ a{
 .card{
   text-align: center;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   transition: $transition-time;
   img{
     width: 100%;
@@ -112,7 +111,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     border: 1px solid #666;
     border-radius: 50%;
     transition: $transition-time;
